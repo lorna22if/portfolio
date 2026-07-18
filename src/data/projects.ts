@@ -49,6 +49,6 @@ export const projects: Project[] = [
     outcome:
       'Delivered scalable functionality while working within the expectations of regulated financial software.',
     technologies: ['C#', '.NET', 'SQL Server', 'Azure', 'SCSS'],
-     image: `${import.meta.env.BASE_URL}images/projects/indigo.avif`
+     image: `${import.meta.env.BASE_URL}images/projects/TruePotential.png`
   },
 ]
