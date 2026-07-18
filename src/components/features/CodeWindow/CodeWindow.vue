@@ -35,8 +35,7 @@ onBeforeUnmount(() => {
 
 <template>
   <article
-    class="overflow-hidden rounded-[28px] border border-slate-800/60 bg-slate-950/95 shadow-[0_35px_120px_rgba(0,0,0,0.45)]"
-  >
+  class="w-full min-w-0 overflow-hidden rounded-[28px] border border-slate-800/60 bg-slate-950/95 shadow-[0_35px_120px_rgba(0,0,0,0.45)]">
     <Transition
       mode="out-in"
       enter-active-class="transition duration-500 ease-out"

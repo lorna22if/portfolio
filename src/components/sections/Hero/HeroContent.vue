@@ -1,12 +1,12 @@
 <template>
-  <div class="flex min-h-[calc(100vh-6rem)] flex-col justify-center py-16">
+  <div class="flex min-h-[calc(100vh-6rem)] flex-col justify-center py-16 min-w-0">
     <p class="mb-8 text-sm font-medium tracking-[0.35em] uppercase text-cyan-400">
       Lorna Fatmi
     </p>
 
     <h1
-      class="max-w-4xl text-6xl font-black leading-[0.9] tracking-[-0.05em] text-white md:text-7xl xl:text-8xl"
-    >
+  class="max-w-full text-[3.25rem] font-black leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl md:text-7xl xl:text-8xl"
+> 
       Building software
 
       <span class="block text-slate-400">
@@ -18,12 +18,12 @@
       </span>
     </h1>
 
-    <p class="mt-10 max-w-md text-xl leading-9 text-slate-400">
+    <p class="mt-8 max-w-md text-lg leading-8 text-slate-400 sm:mt-10 sm:text-xl sm:leading-9">
       Turning complex business problems into products that feel simple,
       reliable and fast.
     </p>
 
-    <div class="mt-10 flex gap-5">
+    <div class="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-5">
       <PrimaryButton href="#projects">
         Explore My Work →
       </PrimaryButton>

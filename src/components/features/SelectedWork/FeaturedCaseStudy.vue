@@ -13,10 +13,11 @@ defineProps<{
     class="mt-12 overflow-hidden rounded-[32px] border border-slate-800/80 bg-slate-900/40 backdrop-blur"
   >
    <BrowserFrame :title="project.title">
-      <img
+     <img
         :src="project.image"
         :alt="`${project.title} application screenshot`"
-        class="w-full transition-transform duration-700 group-hover:scale-[1.015]"
+        class="block h-auto w-full object-cover transition-transform duration-700 group-hover:scale-[1.015]"
+        loading="lazy"
       />
     </BrowserFrame>
 
