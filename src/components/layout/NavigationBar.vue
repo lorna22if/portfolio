@@ -1,13 +1,23 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
+import { useActiveSection } from '@/composables/useActiveSection'
 
+const { activeSection } = useActiveSection()
+
+const links = [
+  { label: 'Work', href: '#projects' },
+  { label: 'How I Work', href: '#how-i-work' },
+  { label: 'Journey', href: '#journey' },
+  { label: 'Contact', href: '#contact' },
+]
 const isScrolled = ref(false)
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 30
+  isScrolled.value = window.scrollY > 50
 }
 
 onMounted(() => {
+  handleScroll()
   window.addEventListener('scroll', handleScroll)
 })
 
@@ -17,47 +27,43 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header
-    class="fixed left-0 top-0 z-50 w-full transition-all duration-300"
-    :class="
-      isScrolled
-        ? 'bg-slate-950/80 backdrop-blur-xl border-b border-slate-800'
-        : 'bg-transparent'
-    "
-  >
-    <div
-      class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6"
+  <header class="fixed left-0 top-0 z-50 w-full px-6">
+    <nav
+      :class="[
+        'mx-auto mt-6 flex max-w-4xl items-center justify-between transition-all duration-300',
+        isScrolled
+          ? 'rounded-full border border-white/10 bg-slate-900/75 px-5 py-2.5 shadow-2xl shadow-black/30 backdrop-blur-xl'
+          : 'px-0 py-4',
+      ]"
     >
-      <a
-        href="#"
-        class="text-2xl font-black tracking-tight transition hover:text-cyan-400"
-      >
-        LF
+      <a href="#" class="text-sm font-semibold tracking-wide text-white">
+        Lorna Fatmi
       </a>
 
-      <nav class="hidden items-center gap-8 md:flex">
-        <a href="#about" class="text-slate-300 transition hover:text-cyan-400">
-          About
-        </a>
-
-        <a href="#skills" class="text-slate-300 transition hover:text-cyan-400">
-          Skills
-        </a>
-
-        <a href="#projects" class="text-slate-300 transition hover:text-cyan-400">
-          Projects
-        </a>
-
-        <a href="#contact" class="text-slate-300 transition hover:text-cyan-400">
-          Contact
-        </a>
-
-        <button
-          class="rounded-full bg-cyan-400 px-5 py-2 font-semibold text-slate-950 transition hover:scale-105"
+      <div class="hidden items-center gap-8 md:flex">
+        <a
+          v-for="link in links"
+          :key="link.href"
+          :href="link.href"
+          class="group relative py-2 text-sm transition-colors duration-300"
+          :class="
+            activeSection === link.href.slice(1)
+              ? 'text-cyan-400'
+              : 'text-slate-400 hover:text-white'
+          "
         >
-          Download CV
-        </button>
-      </nav>
-    </div>
+          {{ link.label }}
+
+          <span
+            class="absolute bottom-0 left-0 h-px bg-cyan-400 transition-all duration-300"
+            :class="
+  activeSection === link.href.slice(1)
+    ? 'text-cyan-400 font-medium'
+    : 'text-slate-400 hover:text-white'
+"
+          />
+        </a>
+      </div>
+    </nav>
   </header>
 </template>

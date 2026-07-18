@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <a
     :href="href"
-    class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+    class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-cyan-500/30"
   >
     <slot />
   </a>

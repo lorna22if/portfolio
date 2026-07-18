@@ -1,0 +1,25 @@
+:root {
+  --surface: #ffffff;
+  --surface-elevated: #f8fafc;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+
+  --border: #e2e8f0;
+
+  --accent: #0891b2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #020617;
+    --surface-elevated: #0f172a;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --border: #1e293b;
+
+    --accent: #22d3ee;
+  }
+}

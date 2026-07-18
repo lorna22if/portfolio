@@ -1,0 +1,18 @@
+:root {
+  /* Radius */
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.75rem;
+
+  /* Motion */
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgb(0 0 0 / 0.12);
+  --shadow-lg: 0 20px 60px rgb(0 0 0 / 0.25);
+
+  /* Layout */
+  --container-width: 80rem;
+}
