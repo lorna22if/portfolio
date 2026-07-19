@@ -1,3 +1,12 @@
+<script setup lang="ts">
+
+  import PrimaryButton from '@/components/common/PrimaryButton.vue'
+  import SecondaryButton from '@/components/common/SecondaryButton.vue'
+
+
+  const cvUrl = `${import.meta.env.BASE_URL}cv/Lorna_Fatmi_2026.pdf`
+</script>
+
 <template>
   <div class="flex min-h-[calc(100vh-6rem)] flex-col justify-center py-16 min-w-0">
     <p class="mb-8 text-sm font-medium tracking-[0.35em] uppercase text-cyan-400">
@@ -28,8 +37,10 @@
         Explore My Work →
       </PrimaryButton>
 
-      <SecondaryButton href="/cv.pdf">
-        Download CV
+      <SecondaryButton :href="cvUrl"
+                        target="_blank"
+                        rel="noopener noreferrer">
+        View CV
       </SecondaryButton>
     </div>
 
@@ -47,8 +58,3 @@
 
   </div>
 </template>
-
-<script setup lang="ts">
-import PrimaryButton from '@/components/common/PrimaryButton.vue'
-import SecondaryButton from '@/components/common/SecondaryButton.vue'
-</script>

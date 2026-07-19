@@ -17,13 +17,12 @@ import { codeSnippets } from '@/data/codeSnippets'
 
       <Container>
         <div
-          class="relative z-10 grid gap-12 pb-20 pt-28 lg:min-h-[calc(100vh-6rem)] lg:grid-cols-[1.3fr_0.7fr] lg:items-center lg:gap-20 lg:pb-16 lg:pt-24"
+          class="relative z-10 grid gap-12 pb-20 pt-28 lg:min-h-[calc(100vh-6rem)] lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-20 lg:pb-16 lg:pt-24"
         >
           <HeroContent />
 
-          <div
-            class="mx-auto mt-4 w-full min-w-0 max-w-lg lg:mt-0 lg:max-w-none lg:pl-8"
-          >
+          <div class="mx-auto mt-4 w-full min-w-0 max-w-lg lg:mt-0 lg:max-w-2xl lg:pl-4">
+        
             <CodeWindow :snippets="codeSnippets" />
           </div>
         </div>
