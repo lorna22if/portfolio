@@ -25,7 +25,7 @@ import SectionHeading from '@/components/common/SectionHeading.vue'
           />
 
           <div class="mt-10 flex justify-center">
-            <PrimaryButton href="mailto:lorna.fatmi@gmail.com">
+            <PrimaryButton href="mailto:hello@lornafatmi.dev">
               Start a Conversation
             </PrimaryButton>
           </div>
@@ -52,7 +52,7 @@ import SectionHeading from '@/components/common/SectionHeading.vue'
             </a>
 
             <a
-              href="mailto:lorna.fatmi@gmail.com"
+              href="mailto:hello@lornafatmi.dev"
               class="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-white"
             >
               <Mail :size="18" />
