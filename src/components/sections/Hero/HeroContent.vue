@@ -4,7 +4,7 @@
   import SecondaryButton from '@/components/common/SecondaryButton.vue'
 
 
-  const cvUrl = `${import.meta.env.BASE_URL}cv/Lorna_Fatmi_2026.pdf`
+  const cvUrl = `${import.meta.env.BASE_URL}cv/LornaFatmi_CV.pdf`
 </script>
 
 <template>

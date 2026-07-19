@@ -39,7 +39,7 @@ import { Github, Linkedin, Mail } from 'lucide-vue-next'
         </a>
 
         <a
-          href="mailto:lorna.fatmi@gmail.com"
+          href="mailto:hello@lornafatmi.dev"
           class="text-slate-400 transition hover:text-cyan-400"
         >
           <Mail :size="20" />
